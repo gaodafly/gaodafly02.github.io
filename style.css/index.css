@@ -1,1 +1,87 @@
 @charset "utf-8";
+:root {
+    box-sizing: border-box;
+}
+
+@keyframes xuanzhuan3d {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+}
+
+#box {
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    animation-name: xuanzhuan3d;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.child1,
+.child2,
+.child3,
+.child4,
+.child5,
+.child6 {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    opacity: 0.7;
+}
+
+.child1 {
+    background-image: url(../images/photo01.webp);
+    background-size: 300px 300px;
+    transform: rotateY(270deg) translateZ(150px);
+}
+
+.child2 {
+    background-image: url(../images/photo02.webp);
+    background-size: 300px 300px;
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.child3 {
+    background-image: url(../images/photo03.jpg);
+    background-size: 300px 300px;
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.child4 {
+    background-image: url(../images/photo04.webp);
+    background-size: 300px 300px;
+    transform: rotateX(270deg) translateZ(150px);
+}
+
+.child5 {
+    background-image: url(../images/photo05.jpg);
+    background-size: 300px 300px;
+    transform: rotateX(180deg) translateZ(150px);
+}
+
+.child6 {
+    background-image: url(../images/photo06.jpg);
+    background-size: 300px 300px;
+    transform: translateZ(150px);
+}
